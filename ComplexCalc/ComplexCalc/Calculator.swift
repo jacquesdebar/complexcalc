@@ -25,6 +25,7 @@ class Calculator {
     }
     
     
+    
     func add(_ arr: [Int]) -> Int {
         var ans = 0
         for n in arr {
@@ -42,6 +43,16 @@ class Calculator {
     
     func count(_ arr: [Int]) -> Int {
         return arr.count
+    }
+
+    func avg(_ arr: [Int]) -> Int {
+        var total = 0
+        let nums = arr.count
+        for num in arr {
+            total += num
+        }
+        let ans : Int = total / nums
+        return ans
     }
     
     
