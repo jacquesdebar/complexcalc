@@ -101,6 +101,18 @@ class Calculator {
     //assert(calc.subtract(lhs: p1, rhs: p2) == (-7, 32))
     //assert(calc.add(lhs: p4, rhs: p4) == (0, 0))
     //assert(calc.add(lhs: p3, rhs: p4) == (-4, 4))
+    func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let xAns: Int = (lhs["x"]! + rhs["x"]!)
+        let yAns: Int = (lhs["y"]! + rhs["y"]!)
+        return ["x": xAns, "y": yAns]
+    }
+    
+    func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        let xAns = lhs.0 + rhs.0
+        let yAns = lhs.1 + rhs.1
+        return (xAns, yAns)
+    }
+    
     //
     //let pd1 = ["x": 5, "y": 5]
     //let pd2 = ["x": -4, "y": 4]
