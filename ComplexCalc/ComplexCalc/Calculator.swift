@@ -40,6 +40,9 @@ class Calculator {
         return ans
     }
     
+    func count(_ arr: [Int]) -> Int {
+        return arr.count
+    }
     
     
 }
