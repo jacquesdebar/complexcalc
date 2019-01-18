@@ -107,20 +107,30 @@ class Calculator {
         return ["x": xAns, "y": yAns]
     }
     
-    func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
-        let xAns = lhs.0 + rhs.0
-        let yAns = lhs.1 + rhs.1
-        return (xAns, yAns)
+    func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let xAns: Int = (lhs["x"]! - rhs["x"]!)
+        let yAns: Int = (lhs["y"]! - rhs["y"]!)
+        return ["x": xAns, "y": yAns]
     }
+    
+    
     
     //
     //let pd1 = ["x": 5, "y": 5]
     //let pd2 = ["x": -4, "y": 4]
     //assert(calc.add(lhs: pd1, rhs: pd2) == ["x": 1, "y": 9])
     //assert(calc.subtract(lhs: pd1, rhs: pd2) == ["x": 9, "y": 1])
+    func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        let xAns = lhs.0 + rhs.0
+        let yAns = lhs.1 + rhs.1
+        return (xAns, yAns)
+    }
     
-    
-    
+    func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        let xAns = lhs.0 - rhs.0
+        let yAns = lhs.1 - rhs.1
+        return (xAns, yAns)
+    }
     
 
     
